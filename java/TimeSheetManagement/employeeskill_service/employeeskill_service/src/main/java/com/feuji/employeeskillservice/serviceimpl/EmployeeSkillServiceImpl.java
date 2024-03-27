@@ -104,12 +104,9 @@ public class EmployeeSkillServiceImpl implements EmployeeSkillService {
 			entity.setYearsOfExp(set.getYearsOfExp());
 			entity.setDescription(set.getDescription());
 			entity.setSkillTypeId(GetIdByName(set.getSkillTypeId()));
-			if (set.getCertification().equals(CommonConstants.YES))
-			{
+			if (set.getCertification().equals(CommonConstants.YES)) {
 				entity.setCertification((byte) CommonConstants.TRUE);
-			}
-			else
-			{
+			} else {
 				entity.setCertification((byte) CommonConstants.FALSE);
 			}
 			entity.setDescription(set.getDescription());
@@ -126,7 +123,6 @@ public class EmployeeSkillServiceImpl implements EmployeeSkillService {
 		}
 
 	}
-
 
 	/**
 	 * Saves an employee skill bean.
@@ -186,12 +182,9 @@ public class EmployeeSkillServiceImpl implements EmployeeSkillService {
 				empSkillBean.setSkillTypeId(Integer.parseInt(bean.getSkillTypeId()));
 				empSkillBean.setYearsOfExp(bean.getYearsOfExp());
 				empSkillBean.setIsDeleted(Byte.parseByte(bean.getIsDeleted()));
-				if (bean.getCertification().equals(CommonConstants.YES))
-				{
+				if (bean.getCertification().equals(CommonConstants.YES)) {
 					empSkillBean.setCertification((byte) CommonConstants.TRUE);
-				}
-				else
-				{
+				} else {
 					empSkillBean.setCertification((byte) CommonConstants.FALSE);
 				}
 				listBeans.add(empSkillBean);
@@ -483,7 +476,6 @@ public class EmployeeSkillServiceImpl implements EmployeeSkillService {
 		log.info("entityToBeanCovertion() ended :in EmployeeSkillServiceImpl");
 		return bean;
 	}
-	
 
 	/**
 	 * Converts an employee skill bean to an EmployeeSkillEntity.

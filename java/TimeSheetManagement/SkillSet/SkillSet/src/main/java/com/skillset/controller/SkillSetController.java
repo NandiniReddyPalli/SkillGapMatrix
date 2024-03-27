@@ -5,19 +5,21 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.feuji.skillset.exception.RecordNotFoundException;
 import com.skillset.dto.GapDto;
 import com.skillset.dto.SkillGapDto;
+import com.skillset.exception.RecordNotFoundException;
 import com.skillset.servic.SkillSetService;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
+@CrossOrigin("*")
 public class SkillSetController {
 
 	@Autowired
